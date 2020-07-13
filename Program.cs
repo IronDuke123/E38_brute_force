@@ -14,6 +14,7 @@ using System.Linq.Expressions;
 
 /*  This is used to brute force the key for E38 ECU's...  
  *  using dll from https://github.com/BrianHumlicek/J2534-Sharp
+ *  Copyright(c) 2018, Brian Humlicek https://github.com/BrianHumlicek
  *  Simple to use, start, select seed to start with and connect to the MDI..
  *  
  * It does tell you when it finds the key that unlocks the ecu and also writes it to a file
