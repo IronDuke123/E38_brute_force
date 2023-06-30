@@ -49,7 +49,7 @@ namespace E38_brute_force
                 Main(args);
             }
             Console.WriteLine($"Starting brute force with {key:X4}");  //Console.WriteLine($"{i:X4}");
-            Channel Channel = APIFactory.GetAPI(DllFileName).GetDevice().GetChannel(Protocol.ISO15765, Baud.ISO15765, ConnectFlag.CAN_29BIT_ID);
+            Channel Channel = APIFactory.GetAPI(DllFileName).GetDevice().GetChannel(Protocol.ISO15765, Baud.ISO15765, ConnectFlag.CAN_ID_BOTH);
             Channel.StartMsgFilter(new MessageFilter(UserFilterType.STANDARDISO15765, new byte[] { 0x00, 0x00, 0x07, 0xE0 }));
             System.Threading.Thread.Sleep(50);
             Channel.SendMessage(new byte[] { 0x00, 0x00, 0x07, 0xE0, 0x09, 0x02 });
